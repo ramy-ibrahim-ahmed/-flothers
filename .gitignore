@@ -3,8 +3,22 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# mine
+data
+models
+test
+
 # C extensions
 *.so
+*.txt
+*.csv
+*.arff
+*.html
+*.joblib
+*.keras
+*.ubj
+*.pkl
+*.db
 
 # Distribution / packaging
 .Python

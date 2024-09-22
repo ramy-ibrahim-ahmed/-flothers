@@ -1,0 +1,18 @@
+sqlite3 urls.db
+
+CREATE TABLE wight_list (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    url TEXT NOT NULL
+);
+
+CREATE TABLE flag_table (
+    id INTEGER PRIMARY KEY CHECK (id = 1), -- Ensure only one row
+    flag BOOL DEFAULT TRUE
+);
+
+INSERT INTO flag_table (id, flag) 
+VALUES (1, TRUE)
+ON CONFLICT(id) 
+DO UPDATE SET flag = flag;
+
+.exit
